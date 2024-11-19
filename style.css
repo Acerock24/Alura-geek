@@ -1,0 +1,160 @@
+/* Reseteo de márgenes y padding para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    box-sizing: border-box; /* Asegura que el ancho y alto incluyan los bordes y el padding */
+}
+
+/* Configuración básica para el body */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal para todo el contenido */
+    background-color: #323232; /* Color de fondo gris claro */
+    color: #4d4d4d; /* Color de texto principal */
+    padding: 20px; /* Espaciado interno alrededor del contenido */
+}
+
+/* Encabezado principal */
+header {
+    text-align: center; /* Centra el texto dentro del encabezado */
+    margin-bottom: 20px; /* Agrega espacio debajo del encabezado */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño grande del texto */
+    color: #b3b3b3; /* Color del título principal */
+    font-weight: bold; /* Negrita */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex; /* Organiza las secciones en fila */
+    justify-content: space-between; /* Espacia uniformemente las secciones */
+    gap: 20px; /* Agrega separación entre las secciones */
+}
+
+/* Sección para agregar productos */
+#add-product {
+    flex: 1; /* Toma un espacio proporcional menor */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+}
+
+#add-product form {
+    margin-top: 25px;
+    display: flex; /* Organiza el formulario en columna */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+#add-product label {
+    margin-bottom: 8px; /* Espaciado entre el label y el input */
+    font-size: 1em; /* Tamaño del texto */
+}
+
+#add-product input {
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 12px; /* Espaciado inferior para separar inputs */
+    border-radius: 4px; /* Bordes redondeados */
+    border: 1px solid hsl(0, 0%, 80%); /* Bordes gris claro */
+    font-size: 1em; /* Tamaño del texto */
+}
+
+/* Botones dentro del formulario */
+.form-buttons {
+    display: flex; /* Organiza los botones en fila */
+    gap: 20px; /* Separación entre botones */
+}
+
+#add-product button {
+    padding: 10px; /* Espaciado interno del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #333; /* Fondo oscuro */
+    color: rgb(255, 255, 255); /* Texto blanco */
+    font-size: 1em; /* Tamaño del texto */
+    border: none; /* Elimina los bordes predeterminados */
+    cursor: pointer; /* Cambia el cursor a "mano" */
+    flex: 1; /* Los botones ocupan el mismo tamaño */
+}
+
+#add-product button:hover {
+    background-color: #555; /* Cambia a un gris más claro al pasar el mouse */
+}
+
+/* Sección para la lista de productos */
+#product-list {
+    flex: 2; /* Toma un espacio proporcional mayor */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    overflow-y: auto; /* Permite desplazamiento si el contenido excede el tamaño */
+    height: 500px; /* Altura fija de la sección */
+}
+.Lista {
+    text-align: center; /* Centra el texto del pie de página */
+}
+
+
+/* Configuración de la galería */
+.gallery {
+    display: grid; /* Configura un diseño en cuadrícula */
+    grid-template-columns: repeat(5, 1fr); /* Cinco columnas de igual tamaño (ajustar a tu necesidad) */
+    gap: 20px; /* Espaciado entre los elementos de la galería */
+}
+
+/* Estilos de las tarjetas de producto */
+.product-card {
+    background-color: #333; /* Fondo oscuro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto e imágenes dentro de la tarjeta */
+    color: white; /* Texto blanco */
+    position: relative; /* Permite posicionar elementos dentro de la tarjeta */
+    width: 100%; /* Ancho reducido */
+    height: 180px; /* Altura reducida */
+}
+
+.product-card img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 100px; /* Altura fija para imágenes */
+    border-radius: 8px; /* Bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.product-card p {
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+/* Estilo del botón de eliminar */
+.product-card .delete-btn {
+    position: absolute; /* Ubicación absoluta dentro de la tarjeta */
+    top: 10px; /* Separación desde la parte superior */
+    right: 10px; /* Separación desde la derecha */
+    cursor: pointer; /* Cambia el cursor a "mano" */
+    background: none; /* Sin fondo para el botón */
+    border: none; /* Sin bordes */
+    font-size: 1.2em; /* Tamaño del ícono */
+    color: red; /* Color del ícono */
+}
+
+/* Pie de página */
+footer {
+    text-align: center; /* Centra el texto del pie de página */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 0.9em; /* Tamaño de texto más pequeño */
+}
+.letricas {
+        color:  #b3b3b3; /* Color del texto específico para &copy; */
+        font-weight: bold; /* Negrita */
+}
+
+/* Estilo para el total de productos, siempre centrado en la parte inferior */
+#total-price {
+    text-align: center; /* Centrado del total */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 1.2em; /* Tamaño del texto */
+    font-weight: bold; /* Estilo en negrita */
+}
+

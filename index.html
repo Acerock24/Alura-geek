@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceGeek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <h1>AceGeek</h1>
+    </header>
+
+    <!-- Contenedor principal que agrupa las secciones -->
+    <div class="container">
+        <!-- Sección para agregar nuevos productos -->
+        <section id="add-product">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="product-form">
+                <!-- Campo para el nombre del producto -->
+                <label for="product-name">Nombre del Producto:</label>
+                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+
+                <!-- Campo para el precio del producto -->
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" placeholder="Precio del producto" required>
+
+                <!-- Campo para la URL de la imagen -->
+                <label for="product-url">URL de la Imagen:</label>
+                <input type="url" id="product-url" placeholder="URL de la imagen">
+
+                <!-- Campo para subir una imagen local -->
+                <label for="product-image">Subir Imagen:</label>
+                <input type="file" id="product-image" accept="image/*">
+
+                <!-- Botones de enviar y limpiar -->
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="button" onclick="clearForm()">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Sección para la lista de productos -->
+        <section id="product-list">
+            <h2 class="Lista">Lista de Productos</h2>
+            <!-- Galería para mostrar los productos -->
+            <div id="gallery" class="gallery">
+                <!-- Productos dinámicos irán aquí -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p class="letricas">&copy; 2024 AceGeek | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="funtion.js"></script>
+</body>
+</html>
